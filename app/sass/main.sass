@@ -1,0 +1,245 @@
+@import "libs"
+@import "base"
+
+
+h1
+	font-size: 30px
+	margin-bottom: 35px
+	text-transform: uppercase
+	color: #051b3d
+
+.container
+	position: relative
+	max-width: 1440px
+	padding: 0 15px
+	width: 100%
+	margin: 0 auto
+
+.header
+	position: fixed
+	right: 0
+	left: 0
+	top: 0
+	padding: 15px 0
+	transition: all .3s
+	z-index: 1001
+	box-shadow: 0 3px 20px rgba(0, 0, 0, .1)
+	background-color: rgba(#fff, 1)
+
+	&--active, &--menu
+		background-color: rgba(#fff, .95)
+		padding: 5px 0
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	p
+		color: #adadad
+		font-size: 18px
+
+
+.main
+	overflow: hidden
+
+
+.hero
+	margin-top: 85px
+	padding-top: 60px
+	padding-bottom: 20px
+
+	p
+		color: #051b3d
+		font-size: 22px
+		margin-right: 35px
+
+	iframe
+		width: 695px
+		height: 390px
+		margin-bottom: 40px
+
+	&__block
+		position: relative
+		width: 60%
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+
+	&__bg
+		position: absolute
+		top: -60px
+		right: -60px
+
+	&__arrow
+		position: absolute
+		right: -15px
+		bottom: 50px
+
+
+.package
+	background-image: url(../img/package--bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	padding-top: 155px
+	padding-bottom: 80px
+
+	h2
+		font-size: 30px
+		color: #fff
+		margin-bottom: 50px
+		text-transform: uppercase
+
+	h3
+		font-family: $text
+		color: #fff
+		font-size: 117px
+		margin-right: 15px
+		line-height: .7
+		float: left
+
+	ul
+		font-size: 24px
+		color: #fff
+
+	li
+		position: relative
+		margin-bottom: 35px
+		padding-left: 110px
+
+		&::before
+			content: url(../img/check.png)
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translate(0, -50%)
+
+
+	&__container
+		display: flex
+		justify-content: flex-end
+
+	&__info
+		width: 42%
+
+	&__price
+		font-size: 32px
+		font-weight: 700
+		margin-bottom: 65px
+		color: #fff
+
+		b
+			display: block
+			color: $accent
+
+
+	.btn
+		margin-left: 90px
+
+
+.why
+	position: relative
+
+	&__container
+		padding-top: 140px
+		padding-bottom: 180px
+
+	h2
+		color: #051b3d
+		font-size: 30px
+		margin-bottom: 120px
+
+	h3, p
+		color: #051b3d
+
+	h3
+		position: relative
+		text-transform: uppercase
+		font-size: 18px
+		margin-bottom: 20px
+		padding-right: 60px
+
+		&::before
+			content: url(../img/check2.png)
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translate(0, -50%)
+
+	p
+		font-size: 24px
+
+	.btn
+		position: absolute
+		left: 50%
+		bottom: -25px
+		transform: translate(-50%, 0)
+
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		width: 31%
+
+
+.work
+	background-color: #348e5c
+	padding-top: 160px
+	padding-bottom: 80px
+	text-align: center
+
+	h2,
+	h3
+		color: #fff
+		text-transform: uppercase
+
+	h2
+		font-size: 30px
+		margin-bottom: 80px
+		text-align: left
+
+	h3
+		font-size: 18px
+
+	img
+		margin-bottom: 25px
+
+	&__list
+		display: flex
+		justify-content: space-around
+		margin-bottom: 80px
+
+	&__item
+		
+
+.footer
+	background-color: #252525
+	padding: 25px 0
+
+	&__container
+		display: flex
+		justify-content: space-between
+
+	p
+		color: #fff
+		font-size: 18px
+
+	.btn
+		background-color: transparent
+		color: #fff
+		border: 1px solid #fff
+		text-transform: none
+
+		&:hover,
+		&:focus
+			border: 1px solid $accent
+			background-color: $accent
+
+
+
+@import "media" // Always at the end
