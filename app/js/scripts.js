@@ -2473,13 +2473,21 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
-        one: "Согласие с пользовательским соглашением.",
+        one: "Нужно ваше согласие!",
+        two: "Нужно ваше согласие!",
+        three: "Нужно ваше согласие!",
+        four: "Нужно ваше согласие!",
+        five: "Нужно ваше согласие!",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
           one: jQuery('.form-' + index).find("input[name=one]").val(),
+          two: jQuery('.form-' + index).find("input[name=two]").val(),
+          three: jQuery('.form-' + index).find("input[name=three]").val(),
+          four: jQuery('.form-' + index).find("input[name=four]").val(),
+          five: jQuery('.form-' + index).find("input[name=five]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
