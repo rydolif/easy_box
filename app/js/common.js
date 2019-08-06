@@ -1,12 +1,7 @@
 $(function() {
 
-//------------------------------гамбургер-----------------------------
-  $('.hamburger').click(function() {
-    $(this).toggleClass('hamburger--active');
-    $('nav').toggleClass('nav--active');
-    $('header').toggleClass('header--menu');
-  });
-
+ new WOW().init();
+ 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
 
@@ -31,11 +26,13 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
+        one: "Согласие с пользовательским соглашением.",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          one: jQuery('.form-' + index).find("input[name=one]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
