@@ -1,12 +1,12 @@
 <?php
-	$SITE_TITLE = 'Доставка еды первой необходимости в Москве';
+	$SITE_TITLE = 'Доставка';
 	$SITE_DESCR = '';
 
 	if ( isset($_POST) ) {
 		$name = htmlspecialchars(trim($_POST['name']));
 		$phone = htmlspecialchars(trim($_POST['phone']));
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
-		$to = 'rudolifrudolif@gmail.com';
+		$to = 'eazyboxmsk@gmail.com';
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
@@ -16,8 +16,6 @@
 		$data = '<h1>'.$subject."</h1>";
 		$data .= 'Имя: '.$name."<br>";
 		$data .= 'Телефон: '.$phone."<br>";
-
-
 
 		$message = "<div style='background:#ccc;border-radius:10px;padding:20px;'>
 				".$data."
